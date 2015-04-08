@@ -1,0 +1,45 @@
+print 'hello, world!'
+
+len()
+str()
+int()
+float()
+
+s = 123
+s = str(s)
+
+b = (4==4)
+print b
+
+#Python is weakly typed. Type as in data type.
+#Example: s = "123" is a string but can do s * 4
+#Can use single or double quote, doesn't matter as long as you are consistent
+#variable is a pointer to a value
+#left is name, right is value
+#variabels have semantic value...should be clear and easy to understand/read
+#Three types of variables: change constantly, constants, changes rarely
+#constants generally in uppercase, something you don't want to change
+
+
+grocery_list = ('apple', 'orange', 'banana')
+for item in grocery_list:
+	print item
+	
+# can use ''' multiline string as comment to define a function and Python help function
+#Most people use single line comments
+#expressions...mathematical expressions...reduce to a single value
+#statements change your program
+#some statements, like if, for, while, etc, need the colon
+#operator takes input and gives you output, most are binary, do not have unary operators
+# ** is exponent, + - * / == += -= *= /=
+#index [] starts at 0, measure in offsets if name is matthew, how many offsets do you have to go to get m, 0
+glist = 'milk eggs'
+glist += ' bread'
+#glist[0] = m
+#to get last character [-1] starts at offset 0 = m and goes in the other direction
+#index slicing[start:end:step] end goes up to but not including 
+#if no start provided [:] start is 0, if no end provided [::] end is the end
+#to reverse string [::-1], useful for a palindrome detector
+#variable. and tab gives you list of functions you can run
+
+#reading for this week: python tutorial on lists
