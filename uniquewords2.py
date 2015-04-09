@@ -7,7 +7,8 @@ sentence = raw_input("Please enter your sentence: ")
 #Makes all characters lower case
 sentence = string.lower(sentence)
 
-#Removes all punctionation from the string
+#Removes most standard punctionation from string
+#Keeps ' because it's and its are two unique words; stripping ' would result in it's = its.
 sentence = re.sub('[.]','',sentence)
 sentence = re.sub('[:]','',sentence)
 sentence = re.sub('[;]','',sentence)
@@ -15,6 +16,9 @@ sentence = re.sub('[?]','',sentence)
 sentence = re.sub('[(]','',sentence)
 sentence = re.sub('[)]','',sentence)
 sentence = re.sub('[!]','',sentence)
+sentence = re.sub('[\[]','',sentence)
+sentence = re.sub('[\]]','',sentence)
+sentence = re.sub('[\"]','',sentence)
 
 #Splits string into list and then turns list into set
 words = set(sentence.split())
