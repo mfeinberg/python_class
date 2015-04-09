@@ -5,8 +5,8 @@ sentence = raw_input("Please enter your sentence: ")
 
 x = len(sentence)
 
-#If statements to ensure sentence ends with a period
-#and make string lower case because set() is case sensitive
+#If statements to ensure sentence ends with a period which is important for first while loop
+#and makes string lower case because set() is case sensitive
 if sentence[x-1].isalpha():
 	sentence = string.lower(sentence)
 	sentence = sentence + "."
@@ -26,18 +26,22 @@ while y < x:
   words.append(sentence[a:y])
   a = y+1
   y=a
-  
+
+words.sort()
+
 b = len(words)
 c = 0
+d = 0
 
-#While loop to remove and "" that may be in the set due to punctionation
-#from the user-entered string 
-while c < b-1:
+#While loop to remove  "" that may be in the set due to punctionation from the user-entered string 
+while c < b-d:
 	if words[c].isalpha():
 		words[c]
 	else:
 		words.pop(c)
+		d+=1
 	c+=1
+
 words_set = set(words)
 
 print "Your sentence contains " + str(len(words_set)) + " unique words."
