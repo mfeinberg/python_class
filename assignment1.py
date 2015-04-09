@@ -9,6 +9,8 @@ len(words_set)
 words2 = sentence.split()
 words2_set = set(words2)
 len(words2_set)
+#.split() does not work because it does not remove punctuation and therefore includes both waste and waste. which 
+#technicaly is only 1 unique word but is interpreted as 2 because of the period
 
 #attempt using  loop 
 sentence = "Thrift is poetic because it is creative; waste is unpoetic because it is waste."
