@@ -1,0 +1,77 @@
+#1 Which line in the list 'y' code causes its output to differ from list 'l' 
+l = [num for num in range(4)]
+l.append('four')
+l.extend([5.0,6])
+l += ['7',16/2,[9,10]]
+print 'list l: ', l
+
+y = []
+y.extend(range(3))
+y.append(['four',5.0]) #this line causes the difference, causes nested list
+y += [6,'7',8,[9,10]]
+print 'list y: ',y
+
+#2a Print all the numbers under 100 that contain a '4' or a '2'
+for x in range(100):
+	if '2' in str(x) or '4' in str(x):
+		print x, 
+		print " ",
+		
+#2b: Print the sum of all numbers under 100 that contain a '4' or a '2'.
+y=0
+for x in range(100):
+	if '2' in str(x) or '4' in str(x):
+		y = y + x
+
+print y
+
+#can also do in one line using sum function
+
+sum([num for num in range(100) if '2' in str(num) or '4' in str(num)])
+
+#3: Swap Values
+#The function below takes in two arguments and swaps their values. 
+#However, it is missing the actual code that does the swap. 
+#Write that code, leaving the rest of the function unchanged.
+
+def swap(num_a, num_b):
+
+  a = [num_a, num_b]
+  b = list(a[:])
+  b.reverse()
+  num_a = b[0]
+  num_b = b[1]
+  return num_a,num_b
+
+a = 4
+b = 9
+print swap(a,b)
+
+# more efficient:
+def swap(num_a, num_b): #idea of swapping is making a back up copy of one and reassign it to the other
+	temp = num_a #backup a
+	num_a = num_b
+	num_b = temp
+	return num_a, num_b
+	
+#4: Writing a wrapper function for id()
+#The id() function returns an integer that represents the location 
+#(memory address) of an object in python. 
+#Write a function called shortaddr that takes in one positive integer, N, and returns 
+#the last N digits of the memory address.
+#You should use the id() function in your function.
+#If the integer N is larger than the size of the number id() returns, then just return the results of id().
+
+
+def shortaddr(N):
+  #print id(N)
+  x = str(id(N))
+  y = len(x)
+  if N > y:
+  	return id(N)
+  else:
+  	short = x[-N:]
+  	return short
+
+val = 150
+print shortaddr(val)
