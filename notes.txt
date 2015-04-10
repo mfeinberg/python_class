@@ -43,3 +43,49 @@ glist += ' bread'
 #variable. and tab gives you list of functions you can run
 
 #reading for this week: python tutorial on lists
+
+Week 2:
+-week 1 assignment
+-conditionals
+-writing our own functions
+-debugging
+-very simple blog backend
+
+\ is a contiuation character to break to next line
+.split() with no arguements uses whitespace
+a set is a list of unique items
+Trim can be done using translate
+much easier to replace
+Strings are immutable but when you use s.replace() it doesn't permanently change s
+s = 'abc"
+s.replace('a','x')
+->'xbc'
+s
+->'abc'
+
+s = list s and list will have same id/reference each other. changing 1 will change the other
+s = list[:] sets s = to the elements/values in list
+
+list is ordered, a set is not an ordered collection
+
+join is a function attached to a string; can be used on a string and only on a string
+	takes in a list or some sort of sequence of unique elements and joins them with the preceding string
+	" ".join("this","is","a","sentence") = this is a sentence
+	
+strings are immutable but lists are...so to insert something into a string convert to list, insert, convert back to string
+
+contiionals: like an if statement
+
+Python doesn't use brackets/()/etc to evaluate conditionals, it uses whitespace (indentations)
+
+for loop
+
+if
+elif
+else
+
+while, like if, will run if condition is true
+
+lists
+append adds a single item
+extend adds all items individually
