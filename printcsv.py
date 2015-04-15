@@ -15,7 +15,7 @@ while x < len(lines):
 	y = 0
 	z = 0
 
-	if x == 0:
+	if x == 0: #only works if four fields
 		a = len(str(format_list[0]))
 		b = len(str(format_list[1]))
 		c = len(str(format_list[2]))
