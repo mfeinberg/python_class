@@ -136,7 +136,7 @@ pure function is one that takes data in and sends data out (mathematical senses)
 a useful function should generally return something
 nothing can go after return
 variables defined in the function are scoped to the function and do not exist outside of the function 
-
+functions help break code out and make it easier to read, avoid having to retype things, makes program more meaningful
 
 programming is binding a name to a value
 name = value
