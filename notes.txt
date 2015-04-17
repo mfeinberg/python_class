@@ -89,3 +89,54 @@ while, like if, will run if condition is true
 lists
 append adds a single item
 extend adds all items individually
+
+
+Week 3
+.format() is a string mehod
+l = [1,23,49]
+"{} {} {}".format(l[0],l[1],l[2])
+-->'1 23 49'
+.join() is a string method
+names = ['Robert Frost','Micahel Jordan','Malcom X']
+", ".join(names)
+-->'Robert Frost, Michael Jordan, Malcom X'
+.join() can be helpful for parsing csv files
+", ".join(name for name in names) #for loop, gives more control over the join because targets each name
+", ".join(name[::-1] for names in names) reverse each item
+"|".join(name.ljust(15) for name in names)
+
+reverse a list = list.reverse() or list[::-1]
+[stop:start:step]
+
+mutable value = a value that can be permanently changed
+
+list is comma separated collection of values where order is importnat
+
+files
+opening a file does not read the file, just opens it
+f.readlines() gives you a list
+can't read twice, the file has twice so once you read the file it is at the end so trying to read gives you nothing
+can chain .readlines to the open command
+look into with construct ie. with open('file.csv') = f\n content = f.readlines()
+
+variable defined in for loop not scoped to loop/it sticks arround
+l = [1,2,3]
+for item in l:
+	print item
+->1
+->2
+->3
+print item
+->3
+
+FUNCTIONS
+def func():
+	<insert code here>
+pure function is one that takes data in and sends data out (mathematical senses)
+a useful function should generally return something
+nothing can go after return
+variables defined in the function are scoped to the function and do not exist outside of the function 
+
+
+programming is binding a name to a value
+name = value
