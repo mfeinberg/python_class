@@ -1,22 +1,3 @@
-Skip to content
- This repository
-Explore
-Gist
-Blog
-Help
-@mfeinberg mfeinberg
- 
- Watch 1
-  Star 1
-  Fork 1
-pythonwithalex/Spring2015
- branch: master  Spring2015/week4/reminder/reminder_outline.py
-@pythonwithalexpythonwithalex 3 hours ago Update reminder_outline.py
-1 contributor
-RawBlameHistory     56 lines (37 sloc)  1.163 kb
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 '''
 Reminder Application
 A bare-bones task management application
@@ -38,16 +19,39 @@ NEXT WEEK:
 '''
 
 # imports
+import sqlite3
+import sys
 
 # set up database connection
+connection = sqlite3.connect #connection to DB
+cursor = connection.cursor() #lets us manipulate DB
 
 # write our schema statement, e.g. CREATE TABLE reminders (id INTEGER PRIMARY KEY)
+#task_description text, datetime text, expired boolean, location text, notes text
+sql_schema = 'CREATE TABLE IF NOT EXISTS reminders(taskid INTEGER PRIMARY KEY, task TEXT, date TEXT, location TEXT, notes TEXT, expired BOOLEAN)'
 # note, integer primary key fields are autoincremented by default
-
 # create db table if not already existing
+#use the cursor to create the new table
+cursor.execute(sql_schema)
 
 def getNewEvent():
-  pass
+  prompt = 'Press [ENTER] to add a task of q/Q to quit '
+  response = raw_input(prompt).strip()
+  if responese in ['q','Q','quit','Quit','QUIT','EXIT','Exit','exit']:
+   sys.exit() #a way of quitting the program
+  else:
+   task = raw_input('Task: ')
+   year = raw_input('Year (yyyy): ')
+   month = raw_input('Month (mm): ')
+   day = raw_input('Day (dd): ')
+   hour = raw_input('Hour (hh): ')
+   minute = raw_input('Minute (mm): ')
+   am_or_pm = raw_input('AM or PM: ')
+   notes = raw_input('Additional information: ')
+   
+   data = [task,year,month,day,hour,minute,notes]
+   
+   cursor.execute('INSERT INTO reminders (task)
 
 def commitNewEvent(event):
   pass
@@ -62,5 +66,3 @@ def mainLoop():
   pass
 
 mainLoop()
-Status API Training Shop Blog About
-© 2015 GitHub, Inc. Terms Privacy Security Contact
