@@ -22,10 +22,9 @@ import sqlite3
 #  os.remove('db.db')
 
 # setup the database connection
+connection = sqlite3.connect('db.db') #creating
+cursor = connection.cursor() #cursor to run things on DB and get results
 
-connection = sqlite3.connect('db.db')
-connection.text_factory = str
-cursor = connection.cursor()
 
 sql_create_statement = 'CREATE TABLE if not exists reminders(id INTEGER PRIMARY KEY, time TEXT, task TEXT, expired BOOLEAN)'
 cursor.execute(sql_create_statement)
