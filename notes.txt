@@ -140,3 +140,13 @@ functions help break code out and make it easier to read, avoid having to retype
 
 programming is binding a name to a value
 name = value
+
+
+Week 4
+
+in python anything is an object and everything can do anything
+empty list evaluates to false
+dictionarys key to value
+
+SQL_Lite
+-schema defines table, inputs, etc
