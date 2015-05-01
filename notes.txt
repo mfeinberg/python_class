@@ -149,4 +149,5 @@ empty list evaluates to false
 dictionarys key to value
 
 SQL_Lite
--schema defines table, inputs, etc
+-schema defines table, inputs, etc = (field DATATYPE, field DATATYPE...)
+-convention dictates that id is INTEGER PRIMARY KEY
