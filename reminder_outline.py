@@ -43,6 +43,7 @@ def getNewEvent():
 		sys.exit()
 
 	else:
+	#might have to go back to original code
 		data = [] #empty list that will be filled w/ user info and then inserted into DB
 		user_info = ['task: ','year (YYYY): ','month (MM) : ','day (DD): ','minute (MM): ','am or pm: ','location: ','additional information: ']
 		for question in user_info:
