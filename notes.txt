@@ -151,3 +151,14 @@ dictionarys key to value
 SQL_Lite
 -schema defines table, inputs, etc = (field DATATYPE, field DATATYPE...)
 -convention dictates that id is INTEGER PRIMARY KEY
+
+Week 5
+print datetime.datetime(year,month,daty,hour,minute) gives you a readable ouptut
+cursor.execute('INSERT INTO reminders (task, date, location, notes, expired) \
+    VALUES (?,?,?,?,?)', (task, time_string, location, notes, expired)
+  Values ??? prevents injection errors
+  
+\ means escpae, so to use special characters, i.e. to use " w/in a string would be string = "matthew said, \"this\""
+project euler
+codeeval
+import excel file for code
