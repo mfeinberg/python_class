@@ -175,3 +175,8 @@ method is likely to change the actual item vs stand alone function likely to pro
 API = interface for external user to access internal data
 create an api, the file can be imported
 ipython commands %
+
+try:
+   
+except:
+   in except clause can specify type of error i.e. IndexError
