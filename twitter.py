@@ -36,3 +36,11 @@ redsox_tweets = tweepy.Cursor(api.search,q="#redsox",lang="en",since_id="2015-05
 for tweet in redsox_tweets:
 	line = '{}\n{}\n\n'.format(tweet.created_at, tweet.text.encode('utf-8'))
 	out_file.write(line)
+
+###
+content = open('output.txt').read()
+tweets = content.split('\n\n')
+new_tweets = []
+for tweet in tweets:
+	time, text = tweet.split('\n')
+	new_tweets.append(dict(time=time,text=text))
