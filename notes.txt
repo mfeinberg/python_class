@@ -162,3 +162,16 @@ cursor.execute('INSERT INTO reminders (task, date, location, notes, expired) \
 project euler
 codeeval
 import excel file for code
+
+Week 5
+class sorting exercise
+to reverse a sort could do either
+sorted_words = sorted(words,key=?,reverse=True)
+OR
+sorted_words = sorted(words,key=?)[::-1]
+.sort() is a mutation and returns non
+sorted is safer, returns a copy
+method is likely to change the actual item vs stand alone function likely to produce a new copy
+API = interface for external user to access internal data
+create an api, the file can be imported
+ipython commands %
