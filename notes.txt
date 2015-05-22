@@ -183,7 +183,7 @@ except:
 
 
 Week 7:
-__ dunder (double underscore) methods
+__ dunder (double underscore) methods, also called magic methods
 Class is similair to a function in the way you create something
 Convention is to capitlize names of Classes
 supports multiple inheritance, but can get very messy
