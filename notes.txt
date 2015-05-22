@@ -180,3 +180,12 @@ try:
    
 except:
    in except clause can specify type of error i.e. IndexError
+
+
+Week 7:
+__ dunder (double underscore) methods
+Class is similair to a function in the way you create something
+Convention is to capitlize names of Classes
+supports multiple inheritance, but can get very messy
+__init__ function runs first, don't need to reutrn anything
+don't alwyas need __init__
