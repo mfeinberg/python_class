@@ -48,7 +48,29 @@ def test():
 	a = 2
 	print locals() #none
 	print a
+	global b #can define a variable as global, but probably shouldn't do it 
+	b = 2
 	
 test()
 print locals()
 print a
+print b
+
+# closures
+# way of protecting some data
+
+def outer():
+	phrase = 'is the coolest.'
+	
+	def inner(name):
+		print ' '.join([name,phrase])
+	
+	return inner
+# outer function and some inner function. outer function has data inside of it
+# inner function because of scoping can refer to data from outer function
+# reference to data persists, even after function is over
+
+sentence_generator = outer() #returns inner to sentence_generator
+sentence_generator('matthew')
+
+#in python things are deleted after reference disappears
