@@ -190,3 +190,5 @@ supports multiple inheritance, but can get very messy
 __init__ function runs first, don't need to reutrn anything
 don't alwyas need __init__
 can define your own methods to default the built in ones
+
+Week 8: 
